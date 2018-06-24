@@ -113,6 +113,7 @@ def fazfig(name):
 #    plt.show()
 
 
-for name in glob.glob('raio30*txt'):
+pattern = input('Entre com o nome das figuras:\n')
+for name in glob.glob(pattern):
     fazfig(name)
 
