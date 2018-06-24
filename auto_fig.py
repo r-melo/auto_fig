@@ -15,6 +15,7 @@ def prepara(vec,ordem):
 
 def fazfig(name):
 
+    figname = name[:-3] + 'png'
     file = []
     with open('averageRelative_' + name, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
@@ -108,7 +109,7 @@ def fazfig(name):
     plt.yticks(fontsize=12)
     plt.xticks(fontsize=12)
     plt.subplots_adjust(hspace=0.01)
-    plt.savefig(name[:-3] + 'png', dpi=600)
+    plt.savefig(figname, dpi=600)
 #    plt.show()
 
 
